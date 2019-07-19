@@ -42,16 +42,16 @@ public class ProcessPayment {
 
 		Ptsv2paymentsOrderInformationBillTo billTo = new Ptsv2paymentsOrderInformationBillTo();
 		billTo.country("US");
-		billTo.firstName("John");
-		billTo.lastName("Deo");
-		billTo.address1("1 Market St");
-		billTo.postalCode("94105");
-		billTo.locality("san francisco");
-		billTo.administrativeArea("CA");
-		billTo.email("test@cybs.com");
+		billTo.firstName("Isabel");
+		billTo.lastName("Sanchez");
+		billTo.address1("5461 N East River Rd");
+		billTo.postalCode("60656");
+		billTo.locality("Chicago");
+		billTo.administrativeArea("IL");
+		billTo.email("isabel.sanchez@cubewave.com");
 
 		Ptsv2paymentsOrderInformationAmountDetails amountDetails = new Ptsv2paymentsOrderInformationAmountDetails();
-		amountDetails.totalAmount("100.00");
+		amountDetails.totalAmount("450.00");
 		amountDetails.currency("USD");
 
 		Ptsv2paymentsOrderInformation orderInformation = new Ptsv2paymentsOrderInformation();
@@ -66,10 +66,10 @@ public class ProcessPayment {
 		request.processingInformation(processingInformation);
 
 		Ptsv2paymentsPaymentInformationCard card = new Ptsv2paymentsPaymentInformationCard();
-		card.expirationYear("2031");
+		card.expirationYear("2025");
 		card.number("4111111111111111");
 		card.securityCode("123");
-		card.expirationMonth("12");
+		card.expirationMonth("1");
 
 		Ptsv2paymentsPaymentInformation paymentInformation = new Ptsv2paymentsPaymentInformation();
 		paymentInformation.card(card);
